@@ -1,9 +1,9 @@
-package com.psrestassured;
+package com.psrestassured.HeadersValidation;
 
 import io.restassured.RestAssured;
 import org.testng.annotations.Test;
 
-public class BasicTest {
+public class _0BasicTest {
 
     @Test
     public void someTest(){

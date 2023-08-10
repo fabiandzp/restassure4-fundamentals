@@ -1,9 +1,9 @@
-package com.psrestassured;
+package com.psrestassured.HeadersValidation;
 
 import io.restassured.RestAssured;
 import org.testng.annotations.Test;
 
-public class PickAndPrint {
+public class _1PickAndPrint {
 
     public static final String BASE_URL = "https://api.github.com";
 

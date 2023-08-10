@@ -1,4 +1,4 @@
-package com.psrestassured;
+package com.psrestassured.HeadersValidation;
 
 import io.restassured.RestAssured;
 import io.restassured.http.Header;
@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-public class BasicResponse {
+public class _2BasicResponse {
 
     public static final String BASE_URL = "https://api.github.com";
 
