@@ -6,14 +6,15 @@ import org.codehaus.groovy.classgen.asm.util.LoggableClassVisitor;
 import org.hamcrest.Matchers;
 import org.hamcrest.number.OrderingComparison;
 import org.testng.annotations.Test;
+import org.testng.collections.Maps;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-import static org.hamcrest.Matchers.emptyString;
-import static org.hamcrest.Matchers.greaterThan;
+import static org.hamcrest.Matchers.*;
 
 public class _3ValidatableResponse {
 
@@ -56,6 +57,22 @@ public class _3ValidatableResponse {
                 .header("x-ratelimit-limit",
                         response -> greaterThan(response.header("x-ratelimit-remaining")));
 
+    }
+
+
+    Map<String, String> expectedHeaders = Map.of("content-encoding","gzip",
+            "access-control-allow-origin", "*");
+
+    @Test
+    public void usingMapsToTestHeaders(){
+
+        RestAssured.get(BASE_URL)
+                .prettyPeek()
+                .then()
+//                .headers("content-encoding","gzip",
+//                        "access-control-allow-origin", "*",
+//                        "cache-control", contains("public"))
+                .headers(expectedHeaders);
 
 
     }
