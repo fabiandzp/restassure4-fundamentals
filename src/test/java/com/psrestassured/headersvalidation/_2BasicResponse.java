@@ -1,4 +1,4 @@
-package com.psrestassured.HeadersValidation;
+package com.psrestassured.headersvalidation;
 
 import io.restassured.RestAssured;
 import io.restassured.http.Header;

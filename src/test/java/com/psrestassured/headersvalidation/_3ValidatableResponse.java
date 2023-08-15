@@ -1,16 +1,13 @@
-package com.psrestassured.HeadersValidation;
+package com.psrestassured.headersvalidation;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-import org.codehaus.groovy.classgen.asm.util.LoggableClassVisitor;
 import org.hamcrest.Matchers;
 import org.hamcrest.number.OrderingComparison;
 import org.testng.annotations.Test;
-import org.testng.collections.Maps;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
